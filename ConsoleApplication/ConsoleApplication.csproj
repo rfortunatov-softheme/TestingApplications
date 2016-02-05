@@ -80,12 +80,6 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Modules\TapesDatabaseClientTests\TapesDatabaseClientTests.csproj">
-      <Project>{608c1936-dd8a-4392-855a-b93b825283b1}</Project>
-      <Name>TapesDatabaseClientTests</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
