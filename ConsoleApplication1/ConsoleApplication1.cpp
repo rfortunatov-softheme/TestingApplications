@@ -4,6 +4,9 @@
 #include "stdafx.h"
 #include <Windows.h>
 #include <ctime>
+#include "ConfigManager.h"
+#include "ConfigOne.h"
+#include "ConfigTwo.h"
 
 void StopService(const wchar_t * serviceName, const wchar_t * hostName)
 {
@@ -122,15 +125,16 @@ void StartService(const wchar_t * serviceName, const wchar_t * hostName)
 }
 
 int _tmain(int argc, _TCHAR* argv[])
-{
-    const wchar_t * machineName = _T("10.10.3.2");
-    const wchar_t * logon_user = _T("Administrator");
-    const wchar_t * password = _T("123asdQ");
-    const wchar_t * domain = _T("");
-    HANDLE token = NULL;
-    LogonUser(logon_user, NULL, password, LOGON32_LOGON_NEW_CREDENTIALS, LOGON32_PROVIDER_WINNT40, &token);
-    ImpersonateLoggedOnUser(token);
-    
-    StopService(L"DellRdsSvc", machineName);    
+{    
+    ConfigManager<ConfigOne> first;
+    ConfigOne config;
+    first.ReadConfig(&config);
+    first.WriteConfig(&config);
+
+    ConfigManager<ConfigTwo> second;
+    ConfigTwo conf;
+    second.ReadConfig(&conf);
+    second.WriteConfig(&conf);
+
     return 0;
 }
