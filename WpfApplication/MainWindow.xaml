@@ -1,123 +1,12 @@
 ﻿<Window x:Class="WpfApplication.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication"
+        mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <StackPanel Orientation="Horizontal"
-                    Grid.Row="0"
-                    Grid.Column="0">
-            <Label Content="Start Date:"
-                   Margin="5"
-                   Width="90"/>
-            <DatePicker VerticalContentAlignment="Center"
-                        HorizontalContentAlignment="Center"
-                        BorderBrush="Transparent"
-                        Name="Start"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal"
-                    Grid.Row="1"
-                    Grid.Column="0">
-            <Label Content="End Date:"
-                   Margin="5"
-                   Width="90"/>
-            <DatePicker VerticalContentAlignment="Center"
-                        HorizontalContentAlignment="Center"
-                        BorderBrush="Transparent"
-                        Name="End"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal"
-                    Grid.Row="2"
-                    Grid.Column="0">
-            <Label Content="Interval(Hours):"
-                   Margin="5"
-                   Width="90"/>
-            <TextBox VerticalContentAlignment="Center"
-                     HorizontalContentAlignment="Center"
-                     Width="150"
-                     Margin="3"
-                     Name="Interval"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal"
-                    Grid.Row="3"
-                    Grid.Column="0">
-            <Label Content="Agent name:"
-                   Margin="5"
-                   Width="90"/>
-            <TextBox VerticalContentAlignment="Center"
-                     HorizontalContentAlignment="Center"
-                     Width="150"
-                     Margin="3"
-                     Name="Agent"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal"
-                    Grid.Row="4"
-                    Grid.Column="0">
-            <Label Content="Core host:"
-                   Margin="5"
-                   Width="90"/>
-            <TextBox VerticalContentAlignment="Center"
-                     HorizontalContentAlignment="Center"
-                     Width="150"
-                     Margin="3"
-                     Name="Core"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal"
-                    Grid.Row="5"
-                    Grid.Column="0">
-            <Label Content="User name:"
-                   Margin="5"
-                   Width="90"/>
-            <TextBox VerticalContentAlignment="Center"
-                     HorizontalContentAlignment="Center"
-                     Width="150"
-                     Margin="3"
-                     Name="User"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal"
-                    Grid.Row="6"
-                    Grid.Column="0">
-            <Label Content="Password:"
-                   Margin="5"
-                   Width="90"/>
-            <TextBox VerticalContentAlignment="Center"
-                     HorizontalContentAlignment="Center"
-                     Width="150"
-                     Margin="3"
-                     Name="Password"/>
-        </StackPanel>
-        <StackPanel Grid.Row="7"
-                    VerticalAlignment="Bottom">
-            <Button Content="Start Generation"
-                    VerticalAlignment="Bottom"
-                    Margin="5"
-                    Click="ButtonBase_OnClick"/>
-            <Button Content="Stop Generation"
-                    VerticalAlignment="Bottom"
-                    Margin="5"
-                    Click="StopGeneratrion"/>
-        </StackPanel>
-        <ScrollViewer Grid.Column="1"
-                      Grid.Row="0"
-                      Grid.RowSpan="8"
-                      VerticalScrollBarVisibility="Auto"
-                      HorizontalScrollBarVisibility="Auto">
-            <TextBlock Name="Output"
-                       TextWrapping="Wrap"
-                       Margin="10"/>
-        </ScrollViewer>
+        
     </Grid>
 </Window>
